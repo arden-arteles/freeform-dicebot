@@ -2,7 +2,7 @@ import * as Discord from "discord.js";
 import {Bot} from "../auth/freeform-dicebot.js";
 
 import * as Commands from "./commands/.commands.js";
-import * as Buttons from "./buttons/.buttons.js";
+// import * as Buttons from "./buttons/.buttons.js";
 
 const client = new Discord.Client({intents: [
 	Discord.IntentsBitField.Flags.Guilds,
