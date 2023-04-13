@@ -31,6 +31,20 @@ export function run(command) {
 
     var lines = [
         `Dice rolled: ${rolls.join(", ")}`,
-        `Result: ${result} ${ResultsTable[result]}`
+        `Result: ${result} (${ResultsTable[result]})`
     ];
+
+    command.reply(lines.join("\n"));
 }
+
+export const details = {
+	name: "roll",
+	description: "Roll dice.",
+	type: ApplicationCommandType.ChatInput,
+	options: [{
+        name: "dice",
+        description: "Additional # dice to roll. Use a negative number to take the lowest.",
+        required: false,
+        type: ApplicationCommandOptionType.String
+    }]
+};
