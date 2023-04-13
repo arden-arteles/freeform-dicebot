@@ -8,8 +8,10 @@ This is a self-hostable bot that handles dice rolling in the Freeform Universal 
     This is necessary to get the individual packages needed. It will automatically download them from NPM.
 3.  Create a Discord application from [https://discord.com/developers/applications].
 4.  Under "OAuth 2" in "URL Generator", create an invite link.
-You'll want to have the "bot" and "application.commands" scopes.
+    You'll want to have the "bot" and "application.commands" scopes.
     No permissions are required -- the "bot" scope is simply to keep track of whether it is online or offline.
+    
+    Invite the bot to a server with this URL.
 5.  Go up one directory level, create a directory called "auth".
 6.  In there, create a npm package. Add the `type: module` key-value pair to package.json.
 7.  Under the Discord Application webpage, under the "Bot" section, click "Reset Token", and copy the token.
