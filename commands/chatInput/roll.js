@@ -26,8 +26,9 @@ export function run(command) {
 
     var emphasisIndex = !takeLowest - 1; // i hate that i can do this
 
-    var result = rolls.at(emphasisIndex);
-    rolls.at(emphasisIndex) = `**${rolls.at(emphasisIndex)}**`
+    if (emphasisIndex < 0) emphasisIndex += rolls.length;
+    var result = rolls[emphasisIndex];
+    rolls[emphasisIndex] = `**${rolls[emphasisIndex]}**`
 
     var lines = [
         `Dice rolled: ${rolls.join(", ")}`,
