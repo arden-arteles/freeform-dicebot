@@ -24,7 +24,7 @@ export function run(command) {
     
     rolls.sort((a,b) => a - b);
 
-    var emphasisIndex = !takeLowest - 1; // i hate that i can do this
+    var emphasisIndex = takeLowest - 1; // i hate that i can do this
 
     if (emphasisIndex < 0) emphasisIndex += rolls.length;
     var result = rolls[emphasisIndex];
